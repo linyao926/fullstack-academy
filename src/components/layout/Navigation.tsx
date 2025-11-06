@@ -93,7 +93,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onSignIn, onEnroll }) =>
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-1 animate-fadeInDown" style={{ animationDelay: '0.2s' }}>
           {isHomePage ? (
-            navLinks.map((link) => (
+            navLinks.map((link) => 'hash' in link ? (
               <button
                 key={link.hash}
                 onClick={() => handleHashNavigation(link.hash)}
@@ -104,7 +104,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onSignIn, onEnroll }) =>
                 </span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full rounded-full"></span>
               </button>
-            ))
+            ): null)
           ) : (
             otherPagesNavLinks.map((link) => (
               <Link
@@ -165,7 +165,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onSignIn, onEnroll }) =>
       >
         <div className="bg-white/95 dark:bg-slate-950/95 backdrop-blur-md px-6 py-4 space-y-2">
           {isHomePage ? (
-            navLinks.map((link) => (
+            navLinks.map((link) => 'hash' in link ? (
               <button
                 key={link.hash}
                 onClick={() => handleHashNavigation(link.hash)}
@@ -175,7 +175,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onSignIn, onEnroll }) =>
                   {link.label}
                 </span>
               </button>
-            ))
+            ): null)
           ) : (
             otherPagesNavLinks.map((link) => (
               <Link

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
 export const Contact: React.FC = () => {
@@ -54,7 +55,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 dark:text-white mb-1">Phone</h3>
-                  <p className="text-slate-600 dark:text-slate-300">+84 28 1234 5678</p>
+                  <p className="text-slate-600 dark:text-slate-300">+84 28 1234 567</p>
                   <p className="text-sm text-slate-500 dark:text-slate-400">Mon-Fri, 9:00 AM – 6:00 PM (GMT+7)</p>
                 </div>
               </div>
@@ -172,7 +173,7 @@ export const Contact: React.FC = () => {
             Check out our FAQ page for answers to common questions.
           </p>
           <button className="btn-secondary">
-            View FAQ
+            <Link to="/faq">View FAQ</Link>
           </button>
         </div>
       </section>

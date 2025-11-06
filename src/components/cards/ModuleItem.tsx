@@ -15,13 +15,13 @@ export const ModuleItem: React.FC<ModuleItemProps> = ({
   onToggle 
 }) => {
   return (
-    <div className="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:border-blue-500 transition-all duration-300 card-hover hover-lift">
+    <div className="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:border-blue-500 transition-all duration-300 card-hover hover-lift" onClick={onToggle}>
       <button
-        onClick={onToggle}
+        
         className="w-full p-6 flex items-center justify-between text-left group"
       >
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 text-xl text-white">
+          <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 text-xl text-white flex-shrink-0">
             {module.icon}
           </div>
           <div>

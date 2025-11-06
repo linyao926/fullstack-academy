@@ -1,14 +1,23 @@
-import React, { useState, useEffect } from 'react';
+// src/components/layout/Layout.tsx
+import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 import { SignInModal } from '../modals/SignInModal';
 import { EnrollModal } from '../modals/EnrollModal';
+import { useModal } from '../../context/ModalContext';
 
 export const Layout: React.FC = () => {
-  const [showSignIn, setShowSignIn] = useState(false);
-  const [showEnroll, setShowEnroll] = useState(false);
   const location = useLocation();
+  const { 
+    showSignIn, 
+    showEnroll, 
+    selectedPlan,
+    openSignIn, 
+    closeSignIn, 
+    openEnroll, 
+    closeEnroll 
+  } = useModal();
 
   // Scroll to top on route change
   useEffect(() => {
@@ -51,8 +60,8 @@ export const Layout: React.FC = () => {
       {/* Content */}
       <div className="relative z-10">
         <Navigation 
-          onSignIn={() => setShowSignIn(true)}
-          onEnroll={() => setShowEnroll(true)}
+          onSignIn={openSignIn}
+          onEnroll={() => openEnroll()}
         />
         
         {/* Main Content - Pages render here */}
@@ -66,13 +75,13 @@ export const Layout: React.FC = () => {
       {/* Modals */}
       <SignInModal 
         isOpen={showSignIn} 
-        onClose={() => setShowSignIn(false)} 
+        onClose={closeSignIn} 
       />
       
       <EnrollModal 
         isOpen={showEnroll} 
-        onClose={() => setShowEnroll(false)}
-        selectedPlan="professional"
+        onClose={closeEnroll}
+        selectedPlan={selectedPlan}
       />
     </div>
   );

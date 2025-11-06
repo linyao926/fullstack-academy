@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCalendar, FaUser, FaClock } from 'react-icons/fa';
 
 export const Blog: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
   const posts = [
     {
       title: 'Getting Started with React Hooks',
@@ -52,6 +56,32 @@ export const Blog: React.FC = () => {
       category: 'Career'
     }
   ];
+
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+
+    if (!email) {
+      setError('Please enter your email');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Invalid email format');
+      return;
+    }
+    
+    console.log('Email submitted:', email);
+
+    // Reset
+    setEmail('');
+    setError('');
+    setSubmitted(false);
+  };
 
   return (
     <div className="pt-24 pb-20">
@@ -132,16 +162,37 @@ export const Blog: React.FC = () => {
           <p className="text-xl mb-8 opacity-90">
             Get the latest articles and coding tips delivered to your inbox weekly.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-3 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-white"
-            />
+          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+            onSubmit={handleSubmit}
+          >
+            <div className="relative w-full">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (submitted) {
+                    setError('');
+                    setSubmitted(false);
+                  }
+                }}
+                placeholder="Enter your email"
+                className={`w-full px-6 py-3 rounded-lg text-slate-900 focus:outline-none focus:ring-2 ${
+                  error ? 'ring-red-500' : 'focus:ring-white'
+                }`}
+              />
+              {error && submitted && (
+                <p className="absolute left-0 top-full mt-1 text-sm ">
+                  {error}
+                </p>
+              )}
+            </div>
             <button type="submit" className="px-8 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-slate-100 transition-all hover-scale">
               Subscribe
             </button>
+            
           </form>
+          
         </div>
       </section>
     </div>

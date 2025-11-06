@@ -1,11 +1,12 @@
 import React from 'react';
-import { FaPlay, FaCode, FaAward, FaUsers, FaComments, FaBriefcase, FaCheckCircle } from 'react-icons/fa';
+import { FaPlay, FaCode, FaAward, FaUsers, FaComments, FaBriefcase } from 'react-icons/fa';
 import { BsLayoutWtf } from 'react-icons/bs';
 import { LuServer, LuDatabase, LuShield, LuRocket } from 'react-icons/lu';
-import { type Module, type Feature, type PricingPlan, type Testimonial, type ModuleContent } from '../types';
+import { type Feature, type ModuleContent } from '../types';
 
 export const MODULES: ModuleContent[] = [
   { 
+    id: 'frontend-fundamentals',
     icon: React.createElement(BsLayoutWtf),
     title: 'Module 1: Frontend Fundamentals', 
     weeks: 4,
@@ -18,6 +19,7 @@ export const MODULES: ModuleContent[] = [
     ]
   },
   { 
+    id: 'modern-frontend-with-react',
     icon: React.createElement(FaCode),
     title: 'Module 2: Modern Frontend with React', 
     weeks: 6,
@@ -31,6 +33,7 @@ export const MODULES: ModuleContent[] = [
     ]
   },
   { 
+    id: 'backend-development-with-nodejs',
     icon: React.createElement(LuServer),
     title: 'Module 3: Backend Development with Node.js', 
     weeks: 6,
@@ -44,6 +47,7 @@ export const MODULES: ModuleContent[] = [
     ]
   },
   { 
+    id: 'databases-and-data-modeling',
     icon: React.createElement(LuDatabase),
     title: 'Module 4: Databases & Data Modeling', 
     weeks: 5,
@@ -57,6 +61,7 @@ export const MODULES: ModuleContent[] = [
     ]
   },
   { 
+    id: 'testing-and-security',
     icon: React.createElement(LuShield),
     title: 'Module 5: Testing & Security', 
     weeks: 3,
@@ -69,6 +74,7 @@ export const MODULES: ModuleContent[] = [
     ]
   },
   { 
+    id: 'devops-and-deployment',
     icon: React.createElement(LuRocket),
     title: 'Module 6: DevOps & Deployment', 
     weeks: 4,

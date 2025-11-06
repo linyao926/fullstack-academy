@@ -5,7 +5,7 @@ export const TermsOfService: React.FC = () => {
     <div className="pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white">Terms of Service</h1>
-        <p className="text-slate-600 dark:text-slate-400 mb-8">Last updated: November 3, 2024</p>
+        <p className="text-slate-600 dark:text-slate-400 mb-8">Last updated: November 3, 2025</p>
 
         <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
           <section>
@@ -140,7 +140,7 @@ export const TermsOfService: React.FC = () => {
             </p>
             <ul className="list-none space-y-2 text-slate-600 dark:text-slate-300 mt-4">
               <li>Email: legal@fullstackacademy.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
+              <li>Phone: +84 28 1234 567</li>
               <li>Address: 123 Tech Street, San Francisco, CA 94102</li>
             </ul>
           </section>

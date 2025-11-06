@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
+import { ModalProvider } from './context/ModalContext';
 import { AppRouter } from './router';
 
 const AppContent: React.FC = () => {
@@ -49,8 +50,12 @@ const AppContent: React.FC = () => {
       {/* Background decorative elements */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 dark:bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-500/3 dark:bg-indigo-500/5 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow" 
+        style={{ animationDelay: '1s' }}
+        ></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-500/3 dark:bg-indigo-500/5 rounded-full blur-3xl animate-pulse-slow" 
+        style={{ animationDelay: '2s' }}
+        ></div>
       </div>
 
       {/* Content */}
@@ -64,7 +69,9 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <AppContent />
+      <ModalProvider> 
+        <AppContent />
+      </ModalProvider>
     </ThemeProvider>
   );
 };

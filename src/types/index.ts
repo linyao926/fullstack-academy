@@ -6,6 +6,7 @@ export interface Module {
 }
 
 export interface ModuleContent extends Module {
+  id: string;
   icon: React.ReactNode;
   topics: string[];
 }

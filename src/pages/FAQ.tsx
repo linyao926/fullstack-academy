@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaChevronDown } from 'react-icons/fa';
+import { useModal } from '../context/ModalContext';
 
 export const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { openEnroll } = useModal();
 
   const faqs = [
     {
@@ -106,11 +109,17 @@ export const FAQ: React.FC = () => {
             Our team is here to help! Get in touch and we'll respond within 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-medium hover:bg-slate-100 transition-all hover-scale">
+            <Link 
+              to="/contact"
+              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-medium hover:bg-slate-100 transition-all hover-scale inline-block"
+            >
               Contact Support
-            </button>
-            <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-all hover-scale">
-              Schedule a Call
+            </Link>
+            <button 
+              onClick={() => openEnroll()}
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-all hover-scale"
+            >
+              Enroll Now
             </button>
           </div>
         </div>

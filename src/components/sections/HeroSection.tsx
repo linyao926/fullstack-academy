@@ -1,7 +1,10 @@
 import React from 'react';
 import { StatItem } from '../ui/StatItem';
+import { useModal } from '../../context/ModalContext';
 
-export function HeroSection() {
+export const HeroSection: React.FC = () => {
+  const { openEnroll } = useModal();
+
   return (
     <section className="pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white dark:from-slate-950 dark:via-slate-800 dark:to-slate-900">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
@@ -13,7 +16,10 @@ export function HeroSection() {
             Learn frontend and backend development from scratch. Build real-world projects, get 1-on-1 mentorship, and launch your tech career.
           </p>
           <div className="flex flex-wrap gap-4 mb-12 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-            <button className="btn-primary btn-ripple btn-shine group" >
+            <button 
+              className="btn-primary btn-ripple btn-shine group" 
+              onClick={() => openEnroll()}
+            >
               <span className="relative z-10 flex items-center gap-2 text-white">
                 Start Free Trial
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>

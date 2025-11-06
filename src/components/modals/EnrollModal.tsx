@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { PRICING_PLANS } from '../../data/constants';
 import { FaTimes, FaCheckCircle, FaCreditCard, FaLock } from 'react-icons/fa';
 
 interface EnrollModalProps {
@@ -38,45 +39,9 @@ export const EnrollModal: React.FC<EnrollModalProps> = ({ isOpen, onClose, selec
   if (!isOpen) return null;
 
   const plans = {
-    starter: { 
-      name: 'Starter', 
-      price: '$299', 
-      duration: '3 months',
-      features: [
-        'Access to 100+ video lessons',
-        '5 fullstack projects',
-        'Community support',
-        'Certificate of completion'
-      ]
-    },
-    professional: { 
-      name: 'Professional', 
-      price: '$599', 
-      duration: '6 months',
-      features: [
-        'Access to 300+ video lessons',
-        '15 fullstack projects',
-        '1-on-1 mentorship',
-        'Certificate of completion',
-        'Career guidance',
-        'Job placement assistance'
-      ]
-    },
-    premium: { 
-      name: 'Premium', 
-      price: '$999', 
-      duration: '12 months',
-      features: [
-        'Access to 500+ video lessons',
-        '25 fullstack projects',
-        'Dedicated mentor',
-        'Certificate of completion',
-        'Career guidance',
-        'Job placement guarantee',
-        'Interview preparation',
-        'Portfolio review'
-      ]
-    },
+    starter: PRICING_PLANS[0],
+    professional: PRICING_PLANS[1],
+    premium: PRICING_PLANS[2],
   };
 
   const currentPlan = plans[selectedPlan];
@@ -336,11 +301,11 @@ export const EnrollModal: React.FC<EnrollModalProps> = ({ isOpen, onClose, selec
         )}
 
         {/* Trust Badges */}
-        <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-200 dark:border-slate-600">
+        {step === 'payment' && <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-200 dark:border-slate-600">
           <p className="text-center text-[10px] sm:text-xs text-slate-500 dark:text-slate-400">
             Secure payment • Money-back guarantee • Start learning immediately
           </p>
-        </div>
+        </div>}
       </div>
     </div>
   );

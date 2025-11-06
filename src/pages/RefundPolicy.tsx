@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 
 export const RefundPolicy: React.FC = () => {
@@ -6,7 +7,7 @@ export const RefundPolicy: React.FC = () => {
     <div className="pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-6">
         <h1 className="text-5xl font-bold mb-4 text-slate-900 dark:text-white">Refund Policy</h1>
-        <p className="text-slate-600 dark:text-slate-400 mb-8">Last updated: November 3, 2024</p>
+        <p className="text-slate-600 dark:text-slate-400 mb-8">Last updated: November 3, 2025</p>
 
         {/* 100% Guarantee Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white mb-12 text-center">
@@ -168,8 +169,8 @@ export const RefundPolicy: React.FC = () => {
             </p>
             <ul className="list-none space-y-2 text-slate-600 dark:text-slate-300">
               <li><strong>Email:</strong> refunds@fullstackacademy.com</li>
-              <li><strong>Phone:</strong> +1 (555) 123-4567</li>
-              <li><strong>Hours:</strong> Monday-Friday, 9am-6pm EST</li>
+              <li><strong>Phone:</strong> +84 28 1234 567</li>
+              <li><strong>Hours:</strong> Mon-Fri, 9:00 AM – 6:00 PM (GMT+7)</li>
             </ul>
           </section>
         </div>
@@ -182,9 +183,11 @@ export const RefundPolicy: React.FC = () => {
           <p className="text-slate-600 dark:text-slate-300 mb-6">
             Our support team is here to help clarify any concerns about our refund policy.
           </p>
-          <button className="btn-primary">
-            Contact Support
-          </button>
+          <Link to="/contact">
+            <button className="btn-primary">
+              Contact Support
+            </button>
+          </Link>
         </div>
       </div>
     </div>

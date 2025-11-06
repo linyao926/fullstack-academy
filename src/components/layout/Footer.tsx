@@ -20,10 +20,10 @@ export function Footer() {
             <FooterColumn 
               title="Course"
               links={[
-                { label: 'Features', href: '#features' },
-                { label: 'Pricing', href: '#' },
-                { label: 'Success Stories', href: '#' },
-                { label: 'Curriculum', href: '#' }
+                { label: 'Features', href: '/#features' },
+                { label: 'Pricing', href: '/#pricing' },
+                { label: 'Success Stories', href: '/#reviews' },
+                { label: 'Curriculum', href: '/#curriculum' }
               ]}
             />
             <FooterColumn 
