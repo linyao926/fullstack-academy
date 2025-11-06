@@ -17,12 +17,14 @@ export interface Feature {
 }
 
 export interface PricingPlan {
+  id?: string;
   name: string;
   subtitle: string;
   price: string;
   duration: string;
-  popular?: boolean;
+  popular: boolean;
   features: string[];
+  onEnrollClick?: () => void;
 }
 
 export interface Testimonial {
@@ -30,6 +32,21 @@ export interface Testimonial {
   role: string;
   avatar: string;
   review: string;
+}
+
+export interface Course {
+  id: string;
+  title: string;
+  description: string;
+  duration: string;
+  level: 'Beginner' | 'Intermediate' | 'Advanced';
+  topics: string[];
+}
+
+export interface NavLink {
+  label: string;
+  path?: string;
+  hash?: string;
 }
 
 export interface FooterLink {

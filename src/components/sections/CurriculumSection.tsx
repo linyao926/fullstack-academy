@@ -7,11 +7,11 @@ export const CurriculumSection: React.FC = () => {
   const [openModule, setOpenModule] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-6 bg-slate-50 dark:bg-slate-800">
+    <section id="curriculum" className="py-20 px-6 bg-slate-50 dark:bg-slate-800">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Complete Fullstack Curriculum</h2>
-          <p className="text-xl text-slate-300">
+          <p className="text-xl text-slate-600 dark:text-slate-300">
             Structured learning path from fundamentals to advanced fullstack development in 6 months.
           </p>
         </div>

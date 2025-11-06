@@ -295,6 +295,7 @@ html {
   @apply shadow-lg hover:shadow-xl hover:scale-105;
   position: relative;
   overflow: hidden;
+  color: #fff;
 }
 
 .btn-primary::before {
@@ -311,8 +312,8 @@ html {
 }
 
 .btn-primary:hover::before {
-  width: 300px;
-  height: 300px;
+  width: 100vw;
+  height: 100vw;
 }
 
 .btn-secondary {

@@ -6,15 +6,15 @@ import { PricingSection } from '../components/sections/PricingSection';
 import { TestimonialsSection } from '../components/sections/TestimonialsSection';
 import { CTASection } from '../components/sections/CTASection';
 
-export const Home: React.FC = () => {
+export function Home() {
   return (
-    <>
+    <main>
       <HeroSection />
       <FeaturesSection />
       <CurriculumSection />
       <PricingSection />
       <TestimonialsSection />
       <CTASection />
-    </>
+    </main>
   );
-};
+}

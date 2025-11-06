@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const CTASection: React.FC = () => {
+export function CTASection() {
   return (
     <section className="py-20 px-6 relative overflow-hidden  bg-white dark:bg-slate-900">
       {/* Background decorations */}

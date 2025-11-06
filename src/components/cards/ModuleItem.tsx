@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCode, FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle } from 'react-icons/fa';
 import { type ModuleContent } from '../../types';
 
 interface ModuleItemProps {
@@ -11,7 +11,6 @@ interface ModuleItemProps {
 
 export const ModuleItem: React.FC<ModuleItemProps> = ({ 
   module, 
-  index, 
   isOpen, 
   onToggle 
 }) => {

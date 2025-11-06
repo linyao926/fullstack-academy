@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { ThemeProvider } from './context/ThemeContext';
-import { Navigation } from './components/layout/Navigation';
-import { Footer } from './components/layout/Footer';
-import { Home } from './pages/Home';
+import { AppRouter } from './router';
 
 const AppContent: React.FC = () => {
   useEffect(() => {
@@ -57,9 +55,7 @@ const AppContent: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        <Navigation />
-        <Home />
-        <Footer />
+        <AppRouter />
       </div>
     </div>
   );

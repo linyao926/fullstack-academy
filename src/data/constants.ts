@@ -116,74 +116,80 @@ export const FEATURES: Feature[] = [
   }
 ];
 
-export const PRICING_PLANS: PricingPlan[] = [
+export const PRICING_PLANS = [
   {
+    id: 'starter',
     name: 'Starter',
     subtitle: 'Perfect for beginners',
     price: '$299',
     duration: '3 months access',
+    popular: false,
     features: [
-      'Access to 150+ video lessons',
-      '5 guided projects',
-      'Email support',
-      'Learning materials & resources',
+      'Access to 100+ video lessons',
+      '5 fullstack projects',
+      'Community support',
       'Certificate of completion',
-      'Community access'
+      'Lifetime access to course materials'
     ]
   },
   {
+    id: 'professional',
     name: 'Professional',
     subtitle: 'Most popular choice',
     price: '$599',
     duration: '6 months access',
     popular: true,
     features: [
-      'Everything in Starter',
       'Access to 300+ video lessons',
       '15 fullstack projects',
-      'Weekly 1-on-1 mentorship',
-      'Detailed code reviews',
-      'Job search assistance',
-      'Lifetime access to content',
+      '1-on-1 mentorship',
+      'Certificate of completion',
+      'Career guidance',
+      'Job placement assistance',
+      'Lifetime access to course materials',
       'Priority support'
     ]
   },
   {
+    id: 'premium',
     name: 'Premium',
-    subtitle: 'Complete career transformation',
+    subtitle: 'For serious learners',
     price: '$999',
     duration: '12 months access',
+    popular: false,
     features: [
-      'Everything in Professional',
-      'Personalized learning path',
-      'Unlimited 1-on-1 mentorship',
-      'Work on real company projects',
-      'Monthly live workshops',
-      'Job guarantee program',
-      'Mock interview practice',
-      'Direct company introductions',
-      'Resume & portfolio review'
+      'Access to 500+ video lessons',
+      '25 fullstack projects',
+      'Dedicated mentor',
+      'Certificate of completion',
+      'Career guidance',
+      'Job placement guarantee',
+      'Interview preparation',
+      'Portfolio review',
+      'Lifetime access to course materials',
+      '24/7 priority support',
+      'Exclusive networking events'
     ]
   }
 ];
 
-export const TESTIMONIALS: Testimonial[] = [
+export const TESTIMONIALS = [
   {
-    name: 'Sarah Mitchell',
-    role: 'Fullstack Developer at Tech Innovate',
-    avatar: 'SM',
-    review: 'After 6 months, I landed my first job earning $85k/year. The curriculum is practical and mentors are incredibly supportive. Best investment I\'ve made!'
+    name: 'Sarah Johnson',
+    role: 'Frontend Developer at Google',
+    avatar: 'SJ',
+    review: 'This bootcamp transformed my career! The hands-on projects and mentorship helped me land my dream job.'
   },
   {
-    name: 'Marcus Chen',
-    role: 'Backend Engineer at StartupCo',
+    name: 'Michael Chen',
+    role: 'Full Stack Engineer at Meta',
     avatar: 'MC',
-    review: 'From zero coding knowledge to building full applications. The structured path and hands-on projects made all the difference. Worth every penny!'
+    review: 'Best investment I ever made. The curriculum is comprehensive and the instructors are world-class.'
   },
   {
     name: 'Emily Rodriguez',
-    role: 'Software Engineer at CloudTech',
+    role: 'Software Engineer at Amazon',
     avatar: 'ER',
-    review: 'This bootcamp helped me successfully transition careers. The mentors are always available and the community is amazing. Highly recommended!'
+    review: 'From zero coding knowledge to employed in 6 months. The job placement assistance was incredible!'
   }
 ];

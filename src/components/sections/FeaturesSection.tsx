@@ -8,7 +8,7 @@ export const FeaturesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Everything You Need to Succeed</h2>
-          <p className="text-xl text-slate-300">
+          <p className="text-xl text-slate-600 dark:text-slate-300">
             Modern learning approach, quality content, and dedicated support from experienced developers.
           </p>
         </div>
