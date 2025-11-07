@@ -48,7 +48,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-600 dark:text-slate-400">
-          <div>© 2025 FullStack Academy. All rights reserved.</div>
+          <div>© 2025 Cam H. All rights reserved.</div>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-slate-900 dark:hover:text-white transition">
               Privacy Policy

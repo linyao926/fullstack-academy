@@ -76,22 +76,18 @@ export const Navigation: React.FC<NavigationProps> = ({ onSignIn, onEnroll }) =>
   const navLinks = isHomePage ? homeNavLinks : otherPagesNavLinks;
 
   return (
-    <nav style={{ borderBottom: 'none' }} className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+    <nav style={{ borderBottom: 'none'}} className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-lg border-b border-slate-200 dark:border-slate-800' 
         : 'bg-transparent'
     }`}>
-      <div style={{ maxWidth: '83rem' }} className="mx-auto px-6 py-4 flex items-center justify-between">
+      <div style={{ maxWidth: '83rem'}} className="mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link 
-          to="/" 
-          className="text-2xl font-bold gradient-text animate-fadeInDown hover:scale-105 transition-transform"
-        >
-          FullStack Academy
-        </Link>
+        <Link to="/" className="text-2xl font-bold gradient-text animate-fadeInDown hover:scale-105 transition-transform " style={{ transition: 'none' }} > FullStack Academy </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-1 animate-fadeInDown" style={{ animationDelay: '0.2s' }}>
+        <div className="hidden lg:flex items-center gap-1 animate-fadeInDown" 
+        style={{ animationDelay: '0.2s' }}>
           {isHomePage ? (
             navLinks.map((link) => 'hash' in link ? (
               <button

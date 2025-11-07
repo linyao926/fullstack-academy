@@ -9,10 +9,18 @@ export const HeroSection: React.FC = () => {
     <section className="pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white dark:from-slate-950 dark:via-slate-800 dark:to-slate-900">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
         <div className="animate-fadeInLeft">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white">
-            Become a <span className="gradient-text">Fullstack</span> Developer
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="text-slate-900 dark:text-white">
+              Become a{' '}
+            </span>
+            <span className="gradient-text" style={{ transition: 'none' }}>Fullstack</span>
+            <span className="text-slate-900 dark:text-white">
+              {' '}Developer
+            </span>
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 animate-fadeInUp text-justify w-[85%]" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 animate-fadeInUp text-justify w-[85%]" 
+          style={{ animationDelay: '0.2s' }}
+          >
             Learn frontend and backend development from scratch. Build real-world projects, get 1-on-1 mentorship, and launch your tech career.
           </p>
           <div className="flex flex-wrap gap-4 mb-12 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>

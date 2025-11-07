@@ -6,10 +6,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ==================== BASE STYLES ==================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html, body, * {
+  transition-property: color, background-color, border-color !important;
+  transition-duration: 00ms !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+.preload * {
+  transition: none !important;
+}
+
+[class*="animate-"],
+.hover\:scale-110:hover,
+.hover-lift:hover {
+  transition: transform 0.3s ease !important;
 }
 
 body {
@@ -22,6 +32,19 @@ body {
 
 button, a {
   outline: none !important;
+}
+
+.text-transition {
+  transition: color 200ms ease-in-out;
+}
+
+/* Ensure smooth theme switch */
+html {
+  color-scheme: light dark;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 /* ==================== SMOOTH SCROLLING ==================== */
@@ -294,7 +317,7 @@ html {
   @apply hover:from-blue-700 hover:to-purple-700;
   @apply shadow-lg hover:shadow-xl;
   @apply hover:scale-105;
-  @apply transition-colors transition-shadow transition-transform duration-300;
+  @apply transition-all duration-300;
   position: relative;
   overflow: hidden;
 }
@@ -321,7 +344,7 @@ html {
   @apply px-8 py-4 border-2 border-slate-600 rounded-lg font-medium;
   @apply hover:border-blue-500 hover:bg-blue-500/10;
   @apply hover:scale-105;
-  @apply transition-colors transition-transform duration-300;
+  @apply transition-all duration-300;
 }
 
 /* ==================== TEXT EFFECTS ==================== */
