@@ -36,7 +36,6 @@ export const addParallaxEffect = (selector: string = '.parallax') => {
   const handleScroll = () => {
     parallaxElements.forEach((element) => {
       const speed = parseFloat(element.getAttribute('data-speed') || '0.5');
-      const rect = element.getBoundingClientRect();
       const scrolled = window.pageYOffset;
       const yPos = -(scrolled * speed);
       

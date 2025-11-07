@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { PRICING_PLANS } from '../../data/constants';
 import { PricingCard } from '../cards/PricingCard';
