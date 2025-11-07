@@ -7,6 +7,10 @@ A modern, responsive landing page for a coding bootcamp built with React, TypeSc
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.17-38B2AC?logo=tailwind-css)
 ![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?logo=vite)
 
+## 🌐 Live Demo
+
+Visit the live site: [fullstack-academy-demo.netlify.app](https://fullstack-academy-demo.netlify.app/)
+
 ## ✨ Features
 
 ### 🎨 **Modern UI/UX**
